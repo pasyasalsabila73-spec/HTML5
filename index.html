@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>CORTIS - HTML5 Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header, nav, section, footer {
+            background: #ffffff;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        header {
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #ff2a85;
+        }
+        h2 {
+            color: #ff2a85;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 350px;
+        }
+        input {
+            padding: 6px;
+            font-size: 0.95rem;
+        }
+        .media-box {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        footer {
+            text-align: center;
+            background: #111;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h1>✦ CORTIS PORTAL ✦</h1>
+        <p>Official Fanpage CORTIS &bull; Spetcial Proyek</p>
+    </header>
+
+   
+    <nav>
+        <a href="#semantik">About CORTIS</a>
+        <a href="#form">Join Fanclub</a>
+        <a href="#grafis">Banner ART</a>
+        <a href="#multimedia">MV &amp; Audio</a>
+    </nav>
+
+   
+    <main>
+        <section id="semantik">
+            <h2>About CORTIS</h2>
+            <article>
+                <p>CORTIS (코르티스) , sebelumnya dikenal sebagai <strong>BIGHITNBG (BIGHIT New Boy Group)</strong>, adalah grup boyband Korea Selatan beranggotakan 5 orang di bawah naungan BIGHIT MUSIC . Anggotanya adalah Martin , James , Juhoon , Seonghyeon , dan Keonho . Di Amerika Serikat, mereka diwakili oleh Republic Records. Mereka debut pada 18 Agustus 2025, dengan single pertama mereka, “What You Want”.</p>
+            </article>
+        </section>
+
+       
+        <section id="form">
+            <h2>Join CORTIS Fanclub</h2>
+            
+            <h3>Daftar Member Baru</h3>
+            <form action="action_page.php" autocomplete="on">
+                Nama Depan: <input type="text" name="fname" placeholder="Masukkan nama depan"><br>
+                Nama Belakang: <input type="text" name="lname" placeholder="Masukkan nama belakang"><br>
+                E-mail: <input type="email" name="email" autocomplete="off" placeholder="email@domain.com"><br>
+                <input type="submit" value="Daftar Sekarang">
+            </form>
+
+            <h3>Berlangganan Info Comeback</h3>
+            <form action="action_page.php" novalidate>
+                E-mail: <input type="email" name="user_email" placeholder="Masukkan email kamu">
+                <input type="submit" value="Subscribe">
+            </form>
+
+            <h3>Kirim Pesan untuk Member</h3>
+            <form action="action_page.php">
+                Bias : <input type="text" name="fname" autofocus placeholder="Tulis nama panggilanmu"><br>
+                Pesan Singkat: <input type="text" name="lname" placeholder="Contoh: Semangat CORTIS!"><br>
+                <input type="submit" value="Kirim Pesan">
+            </form>
+        </section>
+
+        
+        <section id="grafis">
+            <h2>CORTIS Digital Banner</h2>
+            <canvas id="myCanvas" width="220" height="100" style="border:1px solid #000;"> 
+            </canvas>
+        </section>
+
+        
+        <section id="multimedia">
+            <h2>CORTIS Official MV &amp; Audio</h2>
+            
+            <div class="media-box">
+                <div>
+                    <h3>JoyRide - Official MV</h3>
+                    <video width="300" height="200" controls>
+                        <source src="CORTIS (코르티스) 'JoyRide' Official MV.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div>
+                    <h3>TNT - Audio Track</h3>
+                    <audio controls style="margin-top: 3.5rem;">
+                        <source src="CORTIS (코르티스) 'TNT' Official MV - HYBE LABELS.mp3" type="audio/mpeg">          
+                    </audio>
+                </div>
+            </div>
+
+            <h3>YouTube Official MV : CORTIS 'JoyRide'</h3>
+            <iframe width="400" height="250" src="https://www.youtube.com/embed/8QZeXvOjgGE" allowfullscreen></iframe>
+
+            <p style="margin-top: 15px; font-style: italic; color: #ff2a85;">
+                ♪ <em>"Driving so fast got me right on your right down... Friday night pass since back, we're on a joyride!"</em>
+            </p>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2026 Pasya Salsabila Putri (D112511097)</p>
+    </footer>
+
+    
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let x = 110;
+        let arah = 1.5;
+
+        function animasiCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#ff2a85";
+            ctx.fillRect(10, 10, 200, 80);
+
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "bold 15px Arial";
+            ctx.textAlign = "center";
+            ctx.fillText("✦ CORTIS JOYRIDE ✦", x, 55);
+
+            x += arah;
+            if (x > 165 || x < 55) {
+                arah = -arah;
+            }
+
+            requestAnimationFrame(animasiCanvas);
+        }
+
+        animasiCanvas();
+    </script>
+</body>
+</html>
